@@ -6,33 +6,137 @@
     <title>The Roses Park</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
             text-align: center;
-            background-color: #f4f4f4;
+            background: url('WhatsApp%20Image%202025-01-21%20at%2023.40.21.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            animation: fadeInBackground 5s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeInBackground {
+            0% {
+                filter: brightness(0.9);
+            }
+            100% {
+                filter: brightness(1.1);
+            }
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
+            border-bottom: 3px solid #ffccd5;
         }
-        h1 {
-            color: #333;
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #ffccd5;
+            animation: slideIn 2s ease-out;
         }
-        a {
-            display: block;
-            margin: 10px auto;
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .link {
+            display: inline-block;
+            margin: 20px;
             text-decoration: none;
             color: white;
-            background-color: #007BFF;
-            padding: 10px 20px;
-            border-radius: 5px;
-            width: 200px;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border-radius: 50px;
+            background: rgba(255, 192, 203, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
-        a:hover {
-            background-color: #0056b3;
+
+        .link:hover {
+            background: rgba(255, 105, 180, 0.9);
+            transform: scale(1.1) rotate(3deg);
+        }
+
+        .icon {
+            display: block;
+            margin: 0 auto 10px;
+            width: 50px;
+            height: 50px;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffccd5;
+            font-size: 1.2em;
+        }
+
+        footer p {
+            margin: 0;
+            animation: fadeInText 2s ease-in-out;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>The Roses Park-a Xoş gəlmisiniz!</h1>
-    <a href="https://www.instagram.com/theroses.park?igsh=M2RrbDgxdGcxdnpk" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@therosespark?_t=ZS-8tG2AsohkNs&_r=1" target="_blank">TikTok</a>
-    <a href="https://wa.me/+994708049404" target="_blank">WhatsApp</a>
+    <header>
+        <h1>The Roses Park</h1>
+        <p>Sevgini gülə çevirdik</p>
+    </header>
+
+    <div class="container">
+        <a class="link" href="https://www.instagram.com/theroses.park?igsh=M2RrbDgxdGcxdnpk" target="_blank">
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            Instagram
+        </a>
+        
+
+        <a class="link" href="https://www.tiktok.com/@therosespark?_t=ZS-8tG2AsohkNs&_r=1" target="_blank">
+            <img class="icon" src="tiktok-icon.png" alt="TikTok">
+            TikTok
+        </a>
+        
+        <a class="link" href="https://wa.me/+994778049404" target="_blank">
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            WhatsApp
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 The Roses Park. Bütün huquqlar qorunur.</p>
+    </footer>
 </body>
 </html>
